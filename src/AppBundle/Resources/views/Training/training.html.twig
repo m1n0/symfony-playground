@@ -1,0 +1,16 @@
+{% extends '::base1.html.twig' %}
+
+{% block title %}Training Page!{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>Training</h1>
+
+        <p>My job is {{ job }}</p>
+
+        {% include 'AppBundle:Training:content.html.twig' %}
+
+    </div> <!-- /container -->
+
+{% endblock %}

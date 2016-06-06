@@ -1,0 +1,23 @@
+{% extends 'base1.html.twig' %}
+
+{% block body %}
+<div class="container">
+
+    <h3> You are using {{ browser }} browser</h3>
+
+    <div class="row">
+    {#{% for article in articles %}#}
+
+        <div class="col-md-4">
+            <h2>{{ article.title }}</h2>
+            <p>{{ spanify(article.content) | first_word  | raw }} </p>
+            {% for word in splitter(article.content) %}
+                Word: {{ word }}<br />
+            {% endfor %}
+        </div>
+    {#{% endfor %}#}
+    </div>
+
+
+</div>
+{% endblock %}

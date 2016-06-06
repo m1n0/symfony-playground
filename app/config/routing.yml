@@ -1,0 +1,11 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+blog:
+    path: "/blog/{article}"
+    defaults:
+        _controller: "AppBundle:Blog:view"
+        id: 1
+    requirements:
+        id: \d+
